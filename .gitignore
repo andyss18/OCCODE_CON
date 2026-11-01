@@ -1,55 +1,84 @@
-# Prerequisites
-*.d
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# ==========================================
+# VISUAL STUDIO
+# ==========================================
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+*.userprefs
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# ==========================================
+# COMPILACION .NET / ASP.NET CORE
+# ==========================================
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+artifacts/
+publish/
+[Ll]og/
+[Ll]ogs/
 
-# Precompiled Headers
-*.gch
-*.pch
+# ==========================================
+# ARCHIVOS TEMPORALES
+# ==========================================
+*.tmp
+*.temp
+*.bak
+*.old
+*.cache
+*.log
+*~
+~$*
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+# ==========================================
+# PRUEBAS Y COBERTURA
+# ==========================================
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coverage
+*.coveragexml
+coverage/
+BenchmarkDotNet.Artifacts/
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# ==========================================
+# CONFIGURACIONES LOCALES Y SECRETOS
+# ==========================================
+.env
+.env.*
+!.env.example
+secrets.json
+*.pfx
+*.publishsettings
+*.pubxml.user
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# ==========================================
+# BASES DE DATOS LOCALES
+# ==========================================
+*.mdf
+*.ldf
+*.ndf
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# ==========================================
+# NODE.JS (SI UTILIZAS NPM)
+# ==========================================
+node_modules/
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# ==========================================
+# HERRAMIENTAS Y EDITORES
+# ==========================================
+.idea/
+.vscode/
+_ReSharper*/
+*.DotSettings.user
 
-# debug information files
-*.dwo
+# ==========================================
+# SISTEMA OPERATIVO
+# ==========================================
+.DS_Store
+Thumbs.db
+desktop.ini
