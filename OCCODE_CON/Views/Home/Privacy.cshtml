@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Política de Privacidad y Seguridad";
+}
+
+<div class="container mt-4 animate__animated animate__fadeIn">
+    <div class="text-center mb-5">
+        <h1 class="fw-bold" style="color: var(--color-primary-main);">@ViewData["Title"]</h1>
+        <p class="lead text-muted">Módulo Contable SAESCON - Sistema Integrado OCCODE_CON</p>
+    </div>
+
+    <!-- Sección 1: Naturaleza del Sistema -->
+    <div class="card shadow-sm border-0 mb-4" style="border-top: 4px solid var(--color-secondary-main) !important;">
+        <div class="card-body p-4">
+            <h4 class="card-title fw-bold mb-3" style="color: var(--color-primary-dark);">
+                <span class="fs-4 me-2">🎓</span> 1. Naturaleza del Proyecto
+            </h4>
+            <p class="card-text">
+                <strong>OCCODE_CON</strong> es un desarrollo de carácter estrictamente académico, diseñado como proyecto final para el curso de <strong>Bases de Datos I</strong> (6to Semestre, Ingeniería en Sistemas). Toda la información ingresada, procesada y almacenada en esta plataforma tiene fines exclusivos de evaluación, demostración técnica y pruebas de laboratorio.
+            </p>
+        </div>
+    </div>
+
+    <!-- Sección 2: Arquitectura y Datos -->
+    <div class="card shadow-sm border-0 mb-4" style="border-top: 4px solid var(--color-primary-main) !important;">
+        <div class="card-body p-4">
+            <h4 class="card-title fw-bold mb-3" style="color: var(--color-primary-dark);">
+                <span class="fs-4 me-2">🗄️</span> 2. Manejo y Almacenamiento de Datos
+            </h4>
+            <p class="card-text">
+                La arquitectura del sistema garantiza una estricta separación entre la seguridad de la aplicación y la lógica del negocio, operando en un entorno local seguro:
+            </p>
+            <ul class="list-group list-group-flush mb-3">
+                <li class="list-group-item border-0">
+                    <strong style="color: var(--color-primary-main);">Seguridad y Accesos (SQL Server 2025 Express):</strong>
+                    Gestión de usuarios, perfiles, roles y asignación de módulos. Las credenciales de acceso se administran bajo protocolos nativos del motor.
+                </li>
+                <li class="list-group-item border-0">
+                    <strong style="color: var(--color-secondary-main);">Gestión Financiera (Oracle 26ai Express):</strong>
+                    El catálogo de cuentas y los asientos contables transaccionales operan en tablespaces dedicados para garantizar los principios ACID y la consistencia de los datos.
+                </li>
+            </ul>
+            <p class="text-muted small mb-0">
+                <em>* Ningún dato ingresado se transmite a servidores externos ni se comparte con terceros. Todo el ecosistema se ejecuta en un entorno aislado (Localhost / Máquina Virtual).</em>
+            </p>
+        </div>
+    </div>
+
+    <!-- Sección 3: Auditoría -->
+    <div class="alert alert-warning shadow-sm" role="alert" style="background-color: rgba(232, 128, 49, 0.1); border: 1px solid var(--color-secondary-main); border-left: 6px solid var(--color-secondary-main);">
+        <h5 class="alert-heading fw-bold" style="color: var(--color-primary-dark);">
+            <span class="fs-4 me-2">🛡️</span> 3. Trazabilidad y Pistas de Auditoría
+        </h5>
+        <p class="mb-0 text-dark">
+            Para garantizar la fiabilidad del módulo financiero, toda operación de inserción, actualización o eliminación de asientos contables genera <strong>pistas de auditoría automáticas</strong>. Estos registros se almacenan en un *tablespace* exclusivo, documentando el usuario, la fecha y el origen de cada modificación, tal como lo establecen los requerimientos del proyecto.
+        </p>
+    </div>
+
+    <div class="text-center mt-5">
+        <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary px-4 py-2" style="border-radius: 8px;">
+            Regresar al Inicio
+        </a>
+    </div>
+</div>

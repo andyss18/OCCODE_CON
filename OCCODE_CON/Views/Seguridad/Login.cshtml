@@ -1,0 +1,82 @@
+﻿@{
+    Layout = null; // No usamos el layout principal para el Login
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Login - OCCODE_CON</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-color: #F8E7E7;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-card {
+            background: #231F2A;
+            border-top: 5px solid #E32626;
+            border-bottom: 5px solid #E88031;
+            color: #F8E7E7;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .btn-eva {
+            background-color: #E32626;
+            color: white;
+            font-weight: bold;
+        }
+
+            .btn-eva:hover {
+                background-color: #E88031;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card login-card p-4">
+                    <div class="text-center mb-4">
+                        <h3 class="fw-bold" style="color: #E88031;">SAESCON</h3>
+                        <p>Inicio de Sesión</p>
+                    </div>
+                    <form asp-action="Login" method="post">
+                        <div class="mb-3">
+                            <label class="form-label text-white">Usuario</label>
+                            <input type="text" name="username" class="form-control" required />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-white">Contraseña</label>
+                            <input type="password" name="password" class="form-control" required />
+                        </div>
+                        <button type="submit" class="btn btn-eva w-100 mt-3">INGRESAR</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    @if (TempData["Error"] != null)
+    {
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Acceso Denegado',
+                text: '@TempData["Error"]',
+                confirmButtonColor: '#E32626',
+                background: '#231F2A',
+                color: '#F8E7E7'
+            });
+        </script>
+    }
+</body>
+</html>
